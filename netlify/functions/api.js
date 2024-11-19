@@ -1,9 +1,11 @@
-// import express, { Router } from "express";
-// import ServerlessHttp from "serverless-http";
-const express = require('express');
-const router = require('express/lib/router');   
-const ServerlessHttp = require('serverless-http');
+import express, { Router } from "express";
+import ServerlessHttp from "serverless-http";
+// const express = require('express');
+// const router = require('express/lib/router');   
+// const ServerlessHttp = require('serverless-http');
 const dotenv = require('dotenv');
+import dotenv from 'dotenv';
+// import DB from ''
 const DB = require('./db/mongo/mongoConnection')
 dotenv.config();
 
@@ -22,7 +24,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const router = Router();
+const router = Router();
 
 router.get('/', (webReq, webRes) => {
     console.log('welcome this is myspace rksann application running.');
